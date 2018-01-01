@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 const app:Application = express();
 
+
 app.use(bodyParser.json());
 
 initRestApi(app);
