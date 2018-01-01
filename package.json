@@ -6,7 +6,6 @@
   "scripts": {
     "watch": "nodemon -e ts -w ./ -x npm run watch:serve",
     "watch:serve": "./node_modules/.bin/ts-node --inspect  ./server/server.ts"
-  //  "learning-types": "./node_modules/.bin/ts-node  ./learning-types.ts"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +26,7 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "hbs": "^4.0.1",
+    "human-readable-ids": "^1.0.3",
     "lodash": "^4.17.4",
     "pg": "^7.4.0",
     "sequelize": "^4.28.6",
