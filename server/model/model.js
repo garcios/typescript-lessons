@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Sequelize = require("sequelize");
+var initCourseModel_1 = require("./initCourseModel");
+var initLessonModel_1 = require("./initLessonModel");
+var dbUrl = 'postgres://oscar:oscar@localhost:5432/postgres';
+var conn = new Sequelize(dbUrl);
+exports.CourseModel = initCourseModel_1.initCourseModel(conn);
+exports.LessonModel = initLessonModel_1.initLessonModel(conn);
+exports.CourseModel.hasMany(exports.LessonModel, { foreignKey: 'courseId' });
+exports.LessonModel.belongsTo(exports.CourseModel, { foreignKey: 'courseId' });
